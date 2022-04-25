@@ -21,4 +21,6 @@ ENV LANGUAGE en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
+USER postgres
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
